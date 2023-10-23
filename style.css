@@ -13,6 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  overflow: hidden;
 }
 
 .nav_logo {
@@ -203,14 +204,19 @@ option{
 
 
      /* main body */
+body{
+    width: 100vw;
+    height: 100%;
+    }   
+    
 
      /* Background-image */
 
      main > .background-container{
         height: 500px;
-        width: 1500px;
+        width: 1280px;
         white-space: nowrap;
-        /* overflow: hidden; */
+        overflow: hidden;
     }
     
     .background-image{
@@ -238,27 +244,27 @@ option{
     
     
     .image1{
-        background-image: url(main-bc-1.jpg);
+        background-image: url(assets/main-bc-1.jpg);
     }
     
     .image2{
-        background-image: url(main-bc-2.jpg);
+        background-image: url(assets/main-bc-2.jpg);
     }
     
     .image3{
-        background-image: url(main-bc-3.jpg);
+        background-image: url(assets/main-bc-3.jpg);
     }
     
     .image4{
-        background-image: url(main-bc-4.jpg);
+        background-image: url(assets/main-bc-4.jpg);
     }
     
     .image5{
-        background-image: url(main-bc-5.jpg);
+        background-image: url(assets/main-bc-5.jpg);
     }
     
     .image6{
-        background-image: url(main-bc-6.jpg);
+        background-image: url(assets/main-bc-6.jpg);
     }
     
     @keyframes slide {
@@ -356,12 +362,10 @@ option{
 
 .box-section{
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: space-between;
     position: absolute;
     top: 400px;
     /* height: 380px; */
-    /* background-color: #222f3d; */
     }
 
     /* box1 */
@@ -435,13 +439,10 @@ option{
 
 .box-section2{
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: space-between;
     position: absolute;
     top: 850px;
     height: 380px;
-    /* background-color: #222f3d; */
-    /* background-color: #e2e7e6;  */
 }
 
         /* box4 */
@@ -499,30 +500,97 @@ option{
     margin-left: 2px;
  }
 
-        /* slide-section */
+            /* slide-bar */
 
 .slide-bar{
-    width: 1174px;
-    height: 400px;
-    position: absolute;
-    border: 2px solid black;
-    top: 1300px;
-    margin-left: 30px;
-    overflow: hidden;
-    background-color: #e2e7e6;
-}
+        width: 100%;
+        height: 350px;
+        position: relative;
+        top: 700px;
+        border: 2px solid black;
+        margin-left: 30px;
+        overflow: hidden;
+        /* background-color: #e2e7e6; */
+        }
 
-.slide-img img{
-    display: none;
-    justify-content: space-evenly;
-    height: 350px;
-    width: 1174px;
-}
-
-.slide-img-active{
+.slide-image{
     display: inline-block;
-    justify-content: space-evenly;
-    margin-bottom: 90px;
+    height: 100%;
 }
 
+.slide-image > img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+    animation: slideanimation 10s linear infinite;
+}
+.slide-bar > .slide-image > .shoe{
+    width: 300px;
+    margin: 100px 10px 50px 10px;
+}
 
+.slide-bar > .slide-image > .hoody{
+    height: 300px;
+    margin-top: 40px;
+}
+
+.slide-bar > .slide-image > .pants{
+    height: 300px;
+    margin-top: 40px;
+}
+
+.slide-bar > .slide-image > .hoody2{
+    height: 300px;
+    margin-top: 40px;
+}
+
+.slide-bar > .slide-image > .sweatshirt{
+    height: 300px;
+    margin-top: 40px;
+}
+
+.slide-bar > .slide-image > .pant{
+    height: 300px;
+    margin-top: 40px;
+}
+
+.slide-bar > .slide-image > .zippers{
+    height: 300px;
+    margin-top: 40px;
+}
+
+.slide-bar > .slide-image > .sweatshirts{
+    height: 300px;
+    margin-top: 40px;
+}
+
+.slide-bar > .slide-image > .garments {
+    height: 300px;
+    margin-top: 40px;
+}
+
+.slide-bar > .slide-image > .t-shirt{
+    height: 300px;
+    margin-top: 40px;
+}
+
+.slide-bar > .slide-image > .t-shirts{
+    height: 300px;
+    margin-top: 40px;
+}
+
+.slide-bar > .slide-image > .office-shirts{
+    height: 300px;
+    margin-top: 40px;
+}
+
+@keyframes slideanimation{
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-1100px);
+    }
+}
